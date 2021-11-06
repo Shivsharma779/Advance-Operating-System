@@ -44,7 +44,7 @@ int lowerrange=0, highrange=rows-1;
 string root;
 
 
-// ================ For getting back in non canonical mode=======================================//
+// ================ For getting back in  canonical mode=======================================//
 void disableRawMode()
 {
     printf("\033[H\033[J");
@@ -52,7 +52,7 @@ void disableRawMode()
     tcsetattr(STDIN_FILENO, TCSAFLUSH, &orig_termios);
 }
 
-// ================ For getting into canonical mode==============================================//
+// ================ For getting into non canonical mode==============================================//
 void enableRawMode()
 {
     tcgetattr(STDIN_FILENO, &orig_termios);
